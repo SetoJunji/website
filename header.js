@@ -21,7 +21,7 @@ const html = String.raw`<header>
 <li><a href="index.html">ホーム</a></li>
 <li><a href="item.html">アイテム原価</a></li>
 <li><a href="return.html">リターン御礼</a></li>
-<li><a href="char.html"></a></li>
+<li><a href="char.html">副将リスト</a></li>
 </ul>
 </header>`;
 	document.write(css+html);
