@@ -1,0 +1,35 @@
+<html>
+<title>放置少女副将</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="MakeTableHtml.js"></script>
+<script src="GirlsArray.js"></script>
+<script>
+function go(){
+	var girls=GirlsArray();//純粋な配列
+	document.getElementById("output").innerHTML=MakeTableHtml(girls);
+}
+</script>
+
+<body>
+<input type="checkbox" checked="true" id="bushou"/>武将
+<input type="checkbox" checked="true" id="yumishou"/>弓将
+<input type="checkbox" checked="true" id="boushi"/>謀士
+<br>
+<input type="checkbox" checked="true" id="URsenav"/>UR閃アバター
+<input type="checkbox" checked="true" id="URsen"/>UR閃
+<input type="checkbox" id="URav"/>URアバター
+<input type="checkbox" id="UR"/>UR
+<input type="checkbox" id="SSRav"/>SRRアバター
+<input type="checkbox" id="SSR"/>SRR
+<input type="checkbox" id="SR"/>SR
+<input type="checkbox" id="R"/>R
+
+
+<br>
+<br>
+<input type="button" value="GO!" onclick="go()"/>
+<div id="output"></div>
+</body>
+</html>
