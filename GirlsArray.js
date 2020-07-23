@@ -308,14 +308,14 @@ const xy = String.raw`白起,UR閃,武将,6,2,敵6名に600%の物理ダメー�
 return xy.split("\n");
 }
 
-function GirlsArray(){
+function GirlsArray(){//条件を満たすキャラクターの二次元配列を返す
 	var tmp = dp();
 	var xy = [];
-	for(i=0;i<tmp.length;i++){
+	for(i=0;i<tmp.length;i++){//全キャラに対してのループ
 		var bu = document.getElementById("bushou").checked;
 		var yu = document.getElementById("yumishou").checked;
 		var bo = document.getElementById("boushi").checked;
-		var g = tmp[i].split(",");
+		var g = tmp[i].split(",");//各項目毎に分けるがこの時点で表示項目には干渉しない
 		if(
 		((bu&&g[2]=='武将')||(yu&&g[2]=='弓将')||(bo&&g[2]=='謀士')) &&
 		((document.getElementById("URsenav").checked && g[1]=="UR閃アバター")||
@@ -328,6 +328,8 @@ function GirlsArray(){
 		(document.getElementById("R").checked && g[1]=="R"))
 		){xy.push(g);}//そのキャラを表示するかはここで決めれる。
 	}
+	xy.sort(function(a, b){return a[4]- b[4];});
+	xy.unshift(["キャラ名","レアリティ","職業","覚醒上限","成長率","AS1","AS2","PS1","PS2","PS3","専属武器","BS1","BS2","BS3"]);
 	return xy;
 }
 
