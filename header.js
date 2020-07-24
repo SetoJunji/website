@@ -98,12 +98,20 @@ header ul li a{
 */
 </style>`;
 
-const html = String.raw`<header>
-<li><a href="index.html">ホーム</a></li>
-<li><a href="item.html">アイテム原価</a></li>
-<li><a href="return.html">リターン御礼</a></li>
-<li><a href="char.html">副将リスト</a></li>
-</ul>
+const html = String.raw`<header><div style="text-align: center;"><span style="color:green;font-size:130%;">元宝バナナ</span>
+  <div id="nav-drawer" style="float:left;">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input"><span></span></label>
+      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+      <div id="nav-content">
+      <ul>
+      <a href="index.html"><li>ホーム</li></a>
+      <a href="return.html"><li>リターン御礼</li></a>
+      <a href="item.html"><li>アイテム交換</li></a>
+      <a href="char.html"><li>副将</li></a>
+      </ul>
+      </div>
+  </div></div>
 </header>`;
 	document.write(css+html);
 }
