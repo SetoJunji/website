@@ -4,6 +4,7 @@ const css  = String.raw`<style>
 header {
   padding:10px;
   background: skyblue;
+  height: 80px;
 }
 
 #nav-drawer {
@@ -18,8 +19,8 @@ header {
 /*アイコンのスペース*/
 #nav-open {
   display: inline-block;
-  width: 30px;
-  height: 22px;
+  width: 60px;
+  height: 44px;
   vertical-align: middle;
 }
 
@@ -27,12 +28,13 @@ header {
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: absolute;
   height: 3px;/*線の太さ*/
-  width: 25px;/*長さ*/
+  width: 40px;/*長さ*/
   border-radius: 3px;
   background: #555;
   display: block;
   content: '';
   cursor: pointer;
+  background-color: #FFFFFF;
 }
 #nav-open span:before {
   bottom: -8px;
@@ -82,23 +84,9 @@ header {
   transform: translateX(0%);/*中身を表示（右へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
-/*
-header{
-  background-color:black;
-  text-align: center;
-}
-header ul li{
-	display: inline;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-header ul li a{
-	color: red;
-}
-*/
 </style>`;
 
-const html = String.raw`<header><div style="text-align: center;"><span style="color:green;font-size:130%;">元宝バナナ</span>
+const html = String.raw`<header><div style="text-align: center;"><span style="color:green;font-size:260%;">元宝バナナ</span>
   <div id="nav-drawer" style="float:left;">
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label id="nav-open" for="nav-input"><span></span></label>
