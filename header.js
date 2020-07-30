@@ -68,10 +68,10 @@ function closeNav() {
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index.html">About</a>
-  <a href="return.html">Services</a>
-  <a href="item.html">Clients</a>
-  <a href="char.html">Contact</a>
+  <a href="index.html">ホーム</a>
+  <a href="return.html">リターン御礼</a>
+  <a href="item.html">アイテム交換</a>
+  <a href="char.html">副将</a>
 </div>
   </div></div>
 </header>`;
