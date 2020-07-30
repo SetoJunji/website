@@ -76,6 +76,7 @@ function closeNav() {
   <a href="return.html">リターン御礼</a>
   <a href="item.html">アイテム交換</a>
   <a href="char.html">副将</a>
+  <a href="見た目は整えた.html">新しいページ</a>
 </div>`;
 	document.write(css+html);
 }
