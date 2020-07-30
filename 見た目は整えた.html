@@ -1,8 +1,6 @@
-function header(){
-//<span style="color:green;font-size:260%;">元宝バナナ</span>
-//<span style="float:left;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-const css  = String.raw`<style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<title>
+</title>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -11,13 +9,14 @@ body {
 .sidenav {
   height: 100%;
   width: 0;
+  /*max-width:300px;どんなに伸ばしてもここまではいらない*/
   position: fixed;
   z-index: 1;
-  top: 20%;
-  left: 200px;
+  top: 0;
+  left: 0;
   background-color: #111;
   overflow-x: hidden;
-  transition: 0.5s;
+  /*transition: 0.1s;*/
   padding-top: 60px;
 }
 
@@ -46,36 +45,32 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-header {
-  background: skyblue;
-  height: 180px;
-}
-</style>`;
-
-const html = String.raw`
-<header>
-<div style="background-color:red;margin-bottom:10px;text-align: center;">
-<span style="float:left;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-<span style="color: green;font-size: 260%;">元宝バナナ</span>
-</div>
+</style>
+<body>
+<header style="position:relative;text-align: center;background-color: skyblue;color: green;padding:5px;font-size: 48px;">元宝バナナ
+    <div style="position: absolute;height: 100%;top: 0;left: 0px;z-index: 1;text-align: center;">
+      <a href="javascript:void(0)" style="padding-left:10px;color: black;height:100%;text-decoration: none;" onclick="openNav()">&#9775;</a>
+    </div>
 </header>
-
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "50%";
+  document.getElementById("mySidenav").style.width = "300px";
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
-
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">ホーム</a>
   <a href="return.html">リターン御礼</a>
   <a href="item.html">アイテム交換</a>
   <a href="char.html">副将</a>
-</div>`;
-	document.write(css+html);
-}
+</div>
+<main>
+  <p>ヘッダーのスタイルに<br>position:relative;text-align: center;width:100%;を指定するとそれっぽくなる。<br>
+  </p>
+</main>
+</body>
+</html>
