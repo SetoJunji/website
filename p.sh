@@ -1,5 +1,5 @@
 #!bin/bash
 git add --all
-git commit -m "ひとまずコミット"
+git commit -m "ディレクトリ移動"
 git push
 
